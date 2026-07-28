@@ -10,7 +10,7 @@ typedef struct {
 typedef struct {
     int size;
     int count;
-    ht_item** items;
+    ht_item** items; //array ka base address
 } ht_hash_table;
 
 // load_factor = count / size
