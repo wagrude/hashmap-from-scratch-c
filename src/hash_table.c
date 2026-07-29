@@ -11,9 +11,6 @@ static ht_item* ht_new_item(const char* k, const char* v) {
     return i;
 }
 
-
-
-
 ht_hash_table* ht_new() {
     ht_hash_table* ht = malloc(sizeof(ht_hash_table));
 
@@ -22,7 +19,6 @@ ht_hash_table* ht_new() {
     ht->items = calloc((size_t)ht->size, sizeof(ht_item*));
     return ht;
 }
-
 
 static void ht_del_item(ht_item* i) {
     free(i->key);
