@@ -48,3 +48,9 @@ Isme 3 cheeze hain:
 
 - char* hi kyu use kiya?
 - ht_item** kyu hai?
+
+
+
+
+
+confused
