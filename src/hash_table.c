@@ -36,7 +36,6 @@ void ht_del_hash_table(ht_hash_table* ht) {
     free(ht);
 }
 
-
 static int ht_hash(const char* s, const int a, const int m) {
     long hash = 0;
     const int len_s = strlen(s);
