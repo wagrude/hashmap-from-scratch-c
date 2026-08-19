@@ -1,16 +1,21 @@
-// Our key-value pairs (items) will each be stored in a struct:
-typedef struct {
-    char* key;
-    char* value;
+#ifndef HASH_TABLE_H
+#define HASH_TABLE_H
+
+typedef struct
+{
+    char *key;
+    char *value;
 } ht_item;
 
-// Our hash table stores an array of pointers to items, and some details about its size and how full it is:
-// hash_table.h
-
-typedef struct {
+typedef struct
+{
     int size;
     int count;
-    ht_item** items; //array ka base address
+    ht_item **items;
 } ht_hash_table;
 
-// load_factor = count / size
+ht_hash_table *ht_new(void);
+
+void ht_del_hash_table(ht_hash_table *ht);
+
+#endif
