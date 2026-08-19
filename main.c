@@ -8,11 +8,13 @@ int main(void)
 
     if (ht == NULL)
     {
-        printf("Error: Failed to create hash table\n");
+        printf("Failed to create hash table\n");
         return 1;
     }
 
-    printf("HashMap created successfully\n");
+    ht_insert(ht, "name", "Shivansh");
+
+    printf("Inserted successfully\n");
 
     ht_del_hash_table(ht);
 

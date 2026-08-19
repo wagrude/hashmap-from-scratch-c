@@ -90,3 +90,21 @@ static int ht_hash(const char *s, const int a, const int m)
 
     return (int)hash;
 }
+
+void ht_insert(ht_hash_table *ht, const char *key, const char *value)
+{
+    int index = ht_hash(key, 151, ht->size);
+
+    if (ht->items[index] == NULL)
+    {
+        ht_item *item = ht_new_item(key, value);
+
+        if (item == NULL)
+        {
+            return;
+        }
+
+        ht->items[index] = item;
+        ht->count++;
+    }
+}
