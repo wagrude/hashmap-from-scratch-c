@@ -16,6 +16,17 @@ int main(void)
 
     printf("Inserted successfully\n");
 
+    char *value = ht_search(ht, "name");
+
+    if (value != NULL)
+    {
+        printf("Value: %s\n", value);
+    }
+    else
+    {
+        printf("Key not found\n");
+    }
+
     ht_del_hash_table(ht);
 
     return 0;

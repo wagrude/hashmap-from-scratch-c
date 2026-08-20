@@ -108,3 +108,20 @@ void ht_insert(ht_hash_table *ht, const char *key, const char *value)
         ht->count++;
     }
 }
+
+char *ht_search(ht_hash_table *ht, const char *key)
+{
+    int index = ht_hash(key, 151, ht->size);
+
+    if (ht->items[index] == NULL)
+    {
+        return NULL;
+    }
+
+    if (strcmp(ht->items[index]->key, key) == 0)
+    {
+        return ht->items[index]->value;
+    }
+
+    return NULL;
+}
